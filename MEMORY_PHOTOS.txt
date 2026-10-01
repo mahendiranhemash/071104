@@ -1,2 +1,0 @@
-The six uploaded memory photos have been added to the existing "Our Memories" section.
-Files: assets/photo1.jpg through assets/photo6.jpg (photo5 is PNG).
