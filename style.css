@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root{
+  --cream:#f6e4c7;--paper:#fff3df;--ink:#6b3a38;--red:#941f2c;
+  --pink:#d97c8c;--sage:#879a7c;--line:#dfc5a8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--cream)}
+body{font-family:'Caveat',cursive;color:var(--ink);overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.site-shell{min-height:100vh;background:#f6e4c7}
+.screen{min-height:100svh;position:relative;padding:26px 20px 44px;display:flex;align-items:center;justify-content:center;animation:screenIn .55s ease}
+.hidden{display:none!important}
+@keyframes screenIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Welcome */
+.welcome-screen{background:radial-gradient(circle at 50% 42%,#fffaf2 0 16%,#faeee4 44%,#f7e5d7 100%);text-align:center}
+.welcome-content{width:min(100%,520px);padding:45px 10px}
+.gift-wrap{border:0;background:transparent;width:230px;height:220px;position:relative;padding:0;display:block;margin:auto;animation:floatGift 3.2s ease-in-out infinite}
+.gift-shadow{position:absolute;width:155px;height:22px;left:38px;bottom:13px;background:#9b665533;border-radius:50%;filter:blur(7px)}
+.gift-box{position:absolute;width:155px;height:92px;left:38px;bottom:27px;background:repeating-linear-gradient(135deg,#f29ab1 0 7px,#fff1f2 7px 14px);border:3px solid #4b3a3d;border-radius:5px;transition:.3s;box-shadow:0 10px 18px #80513b20}
+.gift-lid{position:absolute;width:170px;height:28px;left:-10px;top:-12px;background:#f3a2b7;border:3px solid #4b3a3d;border-radius:4px}
+.gift-ribbon-v{position:absolute;width:17px;height:92px;left:67px;top:0;background:#d63e6c;border-left:2px solid #54333e;border-right:2px solid #54333e}
+.bow{position:absolute;left:42px;top:-61px;width:78px;height:60px}
+.bow span{position:absolute;width:48px;height:37px;background:#eb547f;border:3px solid #4b3a3d;border-radius:75% 18% 70% 18%;transform:rotate(28deg);top:11px;left:-2px}
+.bow span:nth-child(2){transform:scaleX(-1) rotate(28deg);left:32px}
+.bow b{position:absolute;width:19px;height:19px;border-radius:50%;background:#ec5b84;border:3px solid #4b3a3d;left:30px;top:27px}
+.welcome-content h1,.home-content h1{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-size:clamp(2.5rem,9vw,4rem);font-weight:500;margin:18px 0 4px}
+.soft-text{font-size:1.45rem;color:#9b8378;margin:12px 0}.tiny-hearts{color:#b67b80;font-size:1rem;letter-spacing:4px;margin-top:20px}
+@keyframes floatGift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* Password */
+.password-screen{background:radial-gradient(circle at 50% 34%,#fff9ec 0,#f6dfc8 52%,#edc9aa 100%);text-align:center}
+.close-button{position:absolute;top:20px;right:20px;border:1px solid #e1d2c3;background:#fffaf0d9;border-radius:50%;width:48px;height:48px;font:2rem Arial;color:#78866f}
+.password-content{width:min(100%,420px);padding:32px 0}.lock-flower{font-size:4.2rem;animation:bloom 1.5s ease infinite alternate}
+.password-content h2{font:italic 2.15rem 'Playfair Display',serif;color:var(--red);margin:8px 0 23px}
+.dots{display:flex;justify-content:center;gap:22px;margin:0 auto 20px}.dots span{width:16px;height:16px;border:2px solid #9aae93;border-radius:50%;transition:.2s}.dots span.filled{background:#91a687}
+.hint{font-size:1.3rem;color:#a28a77;margin:0 0 25px}.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;max-width:325px;margin:auto}
+.keypad button{aspect-ratio:1;border:1px solid #e1d4c5;border-radius:50%;background:#fffaf1cc;box-shadow:0 8px 18px #7c624015;font-size:1.9rem;color:#536b58}
+.keypad button:active{transform:scale(.94)}.keypad .clear-key{font-size:1.05rem;color:#9e7840}.pass-note{font-size:1rem;color:#ad9180;margin-top:25px}.pass-note b{color:#8f2330}
+@keyframes bloom{to{transform:scale(1.05) rotate(4deg)}}
+
+/* NEW floral page */
+.floral-screen{padding:0;background:#f9e7c7 url('assets/floral-bg.jpg') center center/cover no-repeat;overflow:hidden}
+.floral-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,247,229,.05),rgba(255,247,229,.10))}
+.floral-center{position:relative;z-index:2;text-align:center;opacity:0;animation:fadeFlower 1.6s ease forwards}
+.floral-center .mini-heart{font-size:3rem;color:#9b3e49;text-shadow:0 2px 8px #7e3a351c}
+.floral-center p{font-size:1.8rem;color:#8d4a4c;margin:0}
+@keyframes fadeFlower{0%{opacity:0;transform:scale(.94)}45%{opacity:1}100%{opacity:1;transform:scale(1)}}
+
+/* Main reference-style page */
+.home-screen{padding:0;background:#f4dec0;align-items:stretch}
+.home-paper{min-height:100svh;width:100%;position:relative;overflow:hidden;background:linear-gradient(180deg,#f9e8cb 0%,#f2d4b1 100%)}
+.dried-roses{position:absolute;left:-12px;top:0;width:min(42vw,300px);max-width:300px;filter:drop-shadow(0 12px 12px rgba(87,53,37,.12));z-index:1}
+.home-content{width:min(100%,700px);min-height:100svh;margin:auto;padding:28vh 24px 80px;text-align:center;position:relative;z-index:2}
+.eyebrow{font-size:1.15rem;color:#9d716c;letter-spacing:.04em;margin:0 0 10px}
+.home-content h1{font-size:clamp(3rem,11vw,5.2rem);margin:0 0 12px;text-shadow:0 1px #fff2df}
+.subtitle{font-size:clamp(1.65rem,5.8vw,2.5rem);color:#854e58;margin:0 0 48px}
+.couple-art{width:min(78vw,500px);display:block;margin:0 auto 34px;mix-blend-mode:multiply;filter:saturate(.9) contrast(.98);box-shadow:none}
+.ornament{font-size:1.6rem;color:#a9555d;margin:12px 0 40px}
+.floating-heart{position:absolute;top:29%;left:30%;font-size:1.6rem;color:#8f4b4d;transform:rotate(-12deg);animation:floatHeart 2.8s ease-in-out infinite}
+@keyframes floatHeart{50%{transform:translateY(-8px) rotate(5deg);opacity:.65}}
+.home-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.menu-card{border:1px solid #d8b9a2;background:#fff5e7cc;border-radius:20px;padding:16px 20px;min-width:180px;box-shadow:0 10px 28px rgba(108,66,42,.08);transition:.2s}
+.menu-card:hover{transform:translateY(-3px);background:#fff9ef}.menu-card span{display:block;font-size:1.6rem;color:#a34c58}.menu-card strong{display:block;font-size:1.45rem;color:#81444a}.menu-card small{display:block;font-size:1rem;color:#a47772}
+
+/* Pages */
+.page-screen{background:linear-gradient(180deg,#f8e6ca,#f0cfac);align-items:flex-start;padding-top:70px}
+.back-button{position:absolute;left:20px;top:18px;border:0;background:#fff5e8cc;border-radius:999px;padding:8px 17px;color:#7b4a4b;font-size:1.25rem}
+.page-heading{text-align:center;margin-bottom:28px}.page-heading h2,.letter-paper h2{font:italic 2.7rem 'Playfair Display',serif;color:var(--red);margin:5px 0 4px}.page-heading p{font-size:1.25rem;color:#9c6f6e}
+.gallery-grid{width:min(100%,900px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.photo{margin:0;background:#fff6e9;padding:8px;border-radius:16px;box-shadow:0 8px 24px #79533a18;overflow:hidden}.photo img{width:100%;height:400px;object-fit:contain;object-position:center;border-radius:11px;display:block;background:#f8e5d2}.photo-tall img,.photo-wide img{height:px}.photo-wide{grid-column:span 2}.photo figcaption{font-size:1.1rem;text-align:center;padding:8px 6px;color:#855257}.placeholder{height:250px;background:repeating-linear-gradient(45deg,#f5dcc2,#f5dcc2 10px,#f9e8d4 10px,#f9e8d4 20px);display:flex;align-items:center;justify-content:center}.placeholder:after{content:'Add your photo ♡';font-size:1.3rem;color:#a47772}
+.letter-screen{align-items:flex-start;min-height:100svh;padding:74px 16px 70px;background:linear-gradient(180deg,#f8e6ca 0%,#f1d0ad 100%)}
+.letter-back{left:auto;right:20px;top:18px;z-index:5;padding:10px 19px;background:#fffaf2e8;border:1px solid #dfd5c7;box-shadow:0 5px 18px rgba(88,60,40,.08)}
+.letter-paper{position:relative;width:min(100%,700px);margin:0 auto;background-color:#fff6e9;border:1px solid #ead6c0;border-radius:9px;padding:54px 42px 58px;box-shadow:0 22px 48px rgba(82,52,36,.12);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 47px,rgba(193,143,121,.20) 48px,transparent 49px);overflow:hidden}
+.letter-paper:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:rgba(213,113,108,.12)}
+.letter-top{text-align:center;font-size:2rem;color:#bf817f;margin:-20px 0 4px}
+.letter-kicker{text-align:center!important;font-size:1.05rem!important;color:#ad7773!important;margin:0 0 8px!important;letter-spacing:.04em}
+.letter-paper h2{font:italic 2.8rem 'Playfair Display',serif;text-align:left;color:#754547;margin:6px 0 30px}
+.letter-paper p{font-size:1.55rem;line-height:1.95;color:#68484a;margin:0 0 20px;letter-spacing:.01em}
+.letter-paper .signature{text-align:right;color:#9b3f4c!important;margin-top:30px;font-size:1.5rem;line-height:1.65}
+.signature span{font-size:1.75rem}
+.letter-ending{text-align:center;margin:58px -42px -58px;padding:72px 20px 65px;background:linear-gradient(180deg,#f5d8b7,#efc99f);border-top:1px solid rgba(150,95,70,.08)}
+.ending-heart{font-size:3rem;color:#bf817f;margin-bottom:36px}
+.letter-ending h3{font:italic 600 clamp(3rem,10vw,5.5rem)/1.05 'Playfair Display',serif;color:#a20f18;margin:0;text-shadow:0 1px rgba(255,245,225,.6)}
+.letter-ending p{font-size:1.65rem;color:#984f59;margin:30px 0 0}
+@media(max-width:560px){
+  .letter-paper{padding:45px 38px 48px}
+  .letter-paper h2{font-size:2.45rem;margin-bottom:25px}
+  .letter-paper p{font-size:1.38rem;line-height:1.95}
+  .letter-ending{margin-left:-38px;margin-right:-38px;margin-bottom:-48px;padding-top:60px}
+  .letter-ending h3{font-size:3.4rem}
+}
+
+@media(max-width:560px){
+  .screen{padding-left:14px;padding-right:14px}
+  .home-content{padding-top:39vh;padding-left:18px;padding-right:18px}
+  .dried-roses{width:55vw}
+  .subtitle{margin-bottom:34px}
+  .couple-art{width:86vw}
+  .ornament{margin-bottom:25px}
+  .home-actions{gap:9px}
+  .menu-card{min-width:155px;padding:12px 14px}
+  .menu-card strong{font-size:1.25rem}
+  .menu-card small{font-size:.9rem}
+  .gallery-grid{gap:10px;grid-template-columns:1fr}
+  .photo,.photo-wide{grid-column:auto}
+  .photo img,.photo-tall img,.photo-wide img{height:250px}
+  .placeholder{height:250px}
+  .photo figcaption{font-size:1rem}
+}
+@media(min-width:900px){
+  .home-content{padding-top:220px}
+}
+
+
+/* Love song player */
+.music-toggle{
+  position:fixed; right:18px; bottom:18px; z-index:1000;
+  border:1px solid rgba(100,55,35,.18); border-radius:999px;
+  padding:11px 16px; cursor:pointer;
+  background:rgba(255,248,235,.94); color:#6b4432;
+  box-shadow:0 8px 24px rgba(70,35,20,.14);
+  font:600 14px/1.1 inherit; backdrop-filter:blur(8px);
+}
+.music-toggle span{margin-left:5px}
+.music-toggle.playing{background:#fff0e8}
+@media(max-width:520px){.music-toggle{right:12px;bottom:12px;padding:10px 13px}.music-toggle span{display:none}}
+
+/* Music only appears on Memories and Love Letter pages */
+.music-toggle.music-hidden{display:none}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f6e2c4">
+  <title>Forever Love ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="site-shell">
+
+  <!-- Gift opening -->
+  <section class="screen welcome-screen" id="welcome">
+    <div class="welcome-content">
+      <button class="gift-wrap" id="openGift" aria-label="Open your gift">
+        <div class="gift-shadow"></div>
+        <div class="gift-box">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-lid"></div>
+          <div class="bow"><span></span><span></span><b></b></div>
+        </div>
+      </button>
+      <h1>For you, my baby.</h1>
+      <p class="soft-text">(tap to open)</p>
+      <div class="tiny-hearts">♡　♡　♡</div>
+    </div>
+  </section>
+
+  <!-- Passkey -->
+  <section class="screen password-screen hidden" id="password">
+    <button class="close-button" id="closePassword" aria-label="Back">×</button>
+    <div class="password-content">
+      <div class="lock-flower">🌸</div>
+      <h2>Enter Passkey</h2>
+      <div class="dots" id="dots"><span></span><span></span><span></span><span></span></div>
+      <p class="hint" id="hint">A little secret, just for us.</p>
+      <div class="keypad" id="keypad">
+        <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+        <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+        <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+        <span></span><button data-key="0">0</button><button data-key="clear" class="clear-key">Clear</button>
+      </div>
+      <p class="pass-note">default passkey: <b>1234</b></p>
+    </div>
+  </section>
+
+  <!-- NEW: floral page from the reference -->
+  <section class="screen floral-screen hidden" id="flowerIntro" aria-label="Flower transition">
+    <div class="floral-overlay"></div>
+    <div class="floral-center">
+      <div class="mini-heart">♡</div>
+      <p>for you, with love</p>
+    </div>
+  </section>
+
+  <!-- Main page matching the supplied reference -->
+  <section class="screen home-screen hidden" id="home">
+    <div class="home-paper">
+      <img class="dried-roses" src="assets/dried-roses.png" alt="" aria-hidden="true">
+      <div class="floating-heart">♡</div>
+
+      <div class="home-content">
+        <p class="eyebrow">a little place for us</p>
+        <h1>From me to you.</h1>
+        <p class="subtitle">This is how much I love you.</p>
+
+        <img class="couple-art" src="assets/couple-art.jpg" alt="A sweet illustration of a couple together">
+
+        <div class="ornament">✦　♡　✦</div>
+
+        <div class="home-actions">
+          <button class="menu-card" data-page="gallery">
+            <span>♡</span><strong>Our memories</strong><small>little moments together</small>
+          </button>
+          <button class="menu-card" data-page="letter">
+            <span>✉</span><strong>A love letter</strong><small>something from my heart</small>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memories -->
+  <section class="screen page-screen gallery-screen hidden" id="gallery">
+    <button class="back-button" data-back="home">‹ Back</button>
+    <div class="page-heading">
+      <p class="eyebrow">the little things I keep</p>
+      <h2>Our Memories</h2>
+      <p>Every little moment with you.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="photo photo-tall"><img src="assets/photo1.jpg" alt="Favorite memory" onerror="this.parentElement.classList.add('placeholder');this.remove()"><figcaption>our beautiful moment</figcaption></figure>
+      <figure class="photo"><img src="assets/photo2.jpg" alt="Happy memory" onerror="this.parentElement.classList.add('placeholder');this.remove()"><figcaption>smiles we share</figcaption></figure>
+      <figure class="photo photo-wide"><img src="assets/photo3.jpg" alt="Memory together" onerror="this.parentElement.classList.add('placeholder');this.remove()"><figcaption>just us together</figcaption></figure>
+      <figure class="photo"><img src="assets/photo4.jpg" alt="Little adventure" onerror="this.parentElement.classList.add('placeholder');this.remove()"><figcaption>a special day</figcaption></figure>
+      <figure class="photo"><img src="assets/photo5.png" alt="Sweet moment" onerror="this.parentElement.classList.add('placeholder');this.remove()"><figcaption>sweet memories</figcaption></figure>
+      <figure class="photo photo-wide"><img src="assets/photo6.jpg" alt="Forever memory" onerror="this.parentElement.classList.add('placeholder');this.remove()"><figcaption>always us ♡</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Love letter -->
+  <section class="screen page-screen letter-screen hidden" id="letter">
+    <button class="back-button letter-back" data-back="home">‹ Back</button>
+    <article class="letter-paper">
+      <div class="letter-top">♡</div>
+      <p class="letter-kicker">A little note from my heart</p>
+      <h2>To My Dearest,</h2>
+
+      <p>I am writing this little note just because you have been on my mind all day long, which is nothing new since you pretty much live there anyway.</p>
+      <p>Every single time I think about your smile, my heart does a tiny happy dance. I find myself smiling at my phone like a complete fool whenever your name pops up, and honestly, it is my absolute favorite part of the day.</p>
+      <p>You have this wonderful way of making the whole world feel brighter and sweeter just by being you. Thank you for all the warm hugs, the soft giggles we share, and the beautiful comfort of knowing you are mine.</p>
+      <p>Being your boyfriend is the happiest thing that has ever happened to me, and I count myself incredibly lucky to hold your hand and walk through life beside you.</p>
+      <p>Please never forget how deeply you are loved and cherished. You are my favorite person, my safest space, and my absolute dream come true.</p>
+      <p>I love you more than all the stars in the night sky, and I cannot wait until the next time I get to hold you close.</p>
+
+      <p class="signature">Forever and always yours,<br><span>Your Love ♡</span></p>
+
+      <div class="letter-ending">
+        <div class="ending-heart">♡</div>
+        <h3>I will always love<br>you</h3>
+        <p>From your forever</p>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<!-- Background music -->
+<audio id="loveSong" src="assets/i-think-they-call-this-love.mp3" preload="auto" loop></audio>
+<button id="musicToggle" class="music-toggle" type="button" aria-label="Play music" aria-pressed="false">♫ <span>Play our song</span></button>
+
+<script src="script.js"></script>
+
+<section id="fromMeToYouExact" class="from-me-to-you-exact" aria-label="From me to you">
+  <img src="from_me_to_you_page.png" alt="From me to you romantic page">
+</section>
+<style>
+#fromMeToYouExact{
+  display:none;
+  width:100%;
+  min-height:100vh;
+  margin:0;
+  padding:0;
+  background:#f8e5c4;
+}
+#fromMeToYouExact img{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:100vh;
+  object-fit:cover;
+  object-position:top center;
+}
+</style>
+
+</body>
+</html>
