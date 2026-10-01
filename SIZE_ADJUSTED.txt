@@ -1,3 +1,0 @@
-Photo size adjusted for the Our Memories gallery.
-Desktop: all memory photos use a consistent 300px display height with object-fit: contain so the photos are not cropped.
-Mobile: all memory photos use a consistent 250px display height and one-column layout for better viewing on phones.
